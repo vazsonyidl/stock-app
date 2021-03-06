@@ -1,0 +1,11 @@
+<mat-toolbar>
+  <button mat-icon-button>
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Stock Cap</span>
+  <div *ngIf="forexBadgeRate | async as badgeRate" class="badge-area">
+      <span *ngFor="let rate of badgeRate.quote | keyvalue">
+        <app-header-badge [rate]="{base: badgeRate.base, quote: rate}"></app-header-badge>
+      </span>
+  </div>
+</mat-toolbar>
