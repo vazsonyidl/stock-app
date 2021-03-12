@@ -1,0 +1,14 @@
+<ng-container *ngIf="cryptoData | async as _cryptoData">
+  <mat-card>
+    <span>Name</span>
+    <span>Price</span>
+    <span>24h</span>
+    <span>Available supply</span>
+    <span>Market capitalization</span>
+  </mat-card>
+  <crypto-card *ngFor="let data of _cryptoData" [cryptoData]="data"></crypto-card>
+</ng-container>
+<mat-paginator [length]="100"
+               [pageSize]="10"
+               [pageSizeOptions]="[5, 10, 15, 50]">
+</mat-paginator>

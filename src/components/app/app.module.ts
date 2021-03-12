@@ -8,7 +8,7 @@ import {rootRoutingConfig} from 'config/routing';
 import {AppComponent} from './app.component';
 import {HeaderModule} from '../header/header.module';
 import {NavigationModule} from '../navigation/navigation.module';
-import {OptionsModule} from '../options/options.module';
+import {CryptoModule} from '../crypto/crypto.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,7 @@ import {OptionsModule} from '../options/options.module';
     CoreModule,
     HeaderModule,
     NavigationModule,
-    OptionsModule,
+    CryptoModule,
     rootRoutingConfig
   ],
   providers: [
