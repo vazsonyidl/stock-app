@@ -13,6 +13,7 @@ const requiredForexes = ['USD', 'CHF', 'CAD'];
   styles: [`
     .badge-area {
       margin: 0 auto;
+      overflow: scroll;
     }
   `]
 })

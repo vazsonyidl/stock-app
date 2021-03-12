@@ -4,6 +4,6 @@ export interface NavigationItem {
 }
 
 export const navigationItems: Array<NavigationItem> = [
-  {link: 'crypto', displayName: 'Cryptocurrencies'},
+  {link: 'cryptocurrency', displayName: 'Cryptocurrencies'},
   {link: 'etf', displayName: 'ETFs'}
 ];
