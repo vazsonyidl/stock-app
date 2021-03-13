@@ -1,10 +1,10 @@
 <ng-container *ngIf="cryptoData | async as _cryptoData">
-  <mat-card>
+  <mat-card class="table-header">
     <span>Name</span>
     <span>Price</span>
     <span>24h</span>
-    <span>Available supply</span>
-    <span>Market capitalization</span>
+    <span>Supply</span>
+    <span>Capitalization</span>
   </mat-card>
   <crypto-card *ngFor="let data of _cryptoData" [cryptoData]="data"></crypto-card>
 </ng-container>

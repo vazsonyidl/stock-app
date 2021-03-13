@@ -1,6 +1,18 @@
 :host {
   mat-card {
     display: flex;
-    justify-content: space-evenly;
+    overflow: scroll;
+
+    span {
+      flex: 1 1 25%;
+      margin: 0 12px;
+    }
+  }
+
+  .table-header {
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    z-index: 1;
   }
 }

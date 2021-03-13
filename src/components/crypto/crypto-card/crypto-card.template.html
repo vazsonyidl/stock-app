@@ -1,5 +1,20 @@
 <mat-card>
-  <mat-card-header>
-    {{cryptoData.name}}
-  </mat-card-header>
+  <span [matTooltip]="cryptoData.name">
+    <img [src]="cryptoData.image"
+        [alt]="cryptoData.name">
+    <span class="crypto-name">{{cryptoData.name}}</span>
+  </span>
+  <span>{{cryptoData.current_price | currency:'USD':'symbol-narrow'}}</span>
+  <span class="daily-change">{{cryptoData.price_change_percentage_24h | number: '1.2-2'}} %</span>
+  <span>
+    {{cryptoData.circulating_supply | number: '1.2-2'}}
+    <mat-progress-bar
+      *ngIf="cryptoData.max_supply"
+      mode="determinate"
+      [value]="cryptoData.circulating_supply / cryptoData.max_supply * 100 | number: '1.2-2'"
+      [matTooltip]="'Max supply: ' + cryptoData.max_supply"
+    >
+    </mat-progress-bar>
+  </span>
+  <span>{{cryptoData.market_cap | currency:'USD':'symbol-narrow':'4.0-0'}}</span>
 </mat-card>

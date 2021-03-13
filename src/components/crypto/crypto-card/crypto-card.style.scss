@@ -1,0 +1,16 @@
+:host {
+  img {
+    width: 1rem;
+    vertical-align: middle;
+  }
+
+  .daily-change {
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .crypto-name {
+    display: none;
+  }
+}

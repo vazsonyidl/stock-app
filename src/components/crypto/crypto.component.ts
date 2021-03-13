@@ -21,7 +21,10 @@ export class CryptoComponent {
   constructor(private readonly optionsService: CryptoService) {
     this.optionsService.getCryptocurrencyInfo().pipe(
       tap((cryptoData) => this.dataSource = new MatTableDataSource(cryptoData)),
-      tap(() => this.setUpPaginator())
+      tap((cd) => {
+        console.log(cd);
+        this.setUpPaginator();
+      })
     ).subscribe();
   }
 
