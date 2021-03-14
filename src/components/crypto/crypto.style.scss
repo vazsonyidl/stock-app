@@ -1,18 +1,19 @@
+@import '~@angular/material/theming';
+
 :host {
   mat-card {
+    @include mat-elevation(3);
     display: flex;
     overflow: scroll;
+    margin: 2px;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    z-index: 1;
 
     span {
       flex: 1 1 25%;
       margin: 0 12px;
     }
-  }
-
-  .table-header {
-    position: sticky;
-    top: 0;
-    align-self: flex-start;
-    z-index: 1;
   }
 }

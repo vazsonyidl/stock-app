@@ -26,3 +26,14 @@ export interface CryptoDataInterface {
   roi: null;
   last_updated: Date;
 }
+
+export interface TransformedCryptoData {
+  name: string;
+  imageSrc: string;
+  currentPrice: number;
+  priceChangePct24h: number;
+  circulatingSupply: number;
+  maxSupply: number;
+  availablePct: number;
+  marketCapitlz: number;
+}

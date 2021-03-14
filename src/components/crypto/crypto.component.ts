@@ -15,16 +15,14 @@ import {CryptoDataInterface} from './crypto-card/crypto-card.model';
 })
 export class CryptoComponent {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
-  dataSource!: MatTableDataSource<CryptoDataInterface>;
-  cryptoData!: BehaviorSubject<Array<CryptoDataInterface>>;
+  public cryptoData!: BehaviorSubject<Array<CryptoDataInterface>>;
+
+  private dataSource!: MatTableDataSource<CryptoDataInterface>;
 
   constructor(private readonly optionsService: CryptoService) {
     this.optionsService.getCryptocurrencyInfo().pipe(
       tap((cryptoData) => this.dataSource = new MatTableDataSource(cryptoData)),
-      tap((cd) => {
-        console.log(cd);
-        this.setUpPaginator();
-      })
+      tap(() => this.setUpPaginator())
     ).subscribe();
   }
 
