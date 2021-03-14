@@ -1,0 +1,29 @@
+<mat-card>
+  <span [matTooltip]="cryptoData.name">
+    <img [src]="cryptoData.imageSrc"
+         [alt]="cryptoData.name">
+    <span class="crypto-name">{{cryptoData.name}}</span>
+  </span>
+  <span>{{cryptoData.currentPrice | currency:'USD':'symbol-narrow'}}</span>
+  <span class="daily-change">
+    {{cryptoData.priceChangePct24h | number: '1.2-2'}} %
+    <mat-icon
+      [ngClass]="cryptoData.priceChangePct24h > 0 ? 'price-up' : 'price-down'"
+      [inline]="true"
+      aria-hidden="false"
+      aria-label="Example home icon">
+      play_arrow
+    </mat-icon>
+  </span>
+  <span>
+    {{cryptoData.circulatingSupply | number: '1.2-2'}}
+    <mat-progress-bar
+      *ngIf="cryptoData.maxSupply"
+      mode="determinate"
+      [value]="cryptoData.availablePct | number: '1.2-2'"
+      [matTooltip]="'Max supply: ' + cryptoData.maxSupply"
+    >
+    </mat-progress-bar>
+  </span>
+  <span>{{cryptoData.marketCapitlz | currency:'USD':'symbol-narrow':'4.0-0'}}</span>
+</mat-card>

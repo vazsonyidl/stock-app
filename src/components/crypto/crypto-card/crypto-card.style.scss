@@ -1,0 +1,40 @@
+:host {
+  mat-card {
+    display: flex;
+    overflow: scroll;
+    margin: 2px;
+
+    span {
+      flex: 1 1 25%;
+      margin: 0 8px;
+      padding: 0 4px;
+
+      img {
+        width: 1rem;
+        vertical-align: middle;
+      }
+    }
+
+    .daily-change {
+      white-space: nowrap;
+    }
+  }
+
+  mat-icon {
+    &.price-up {
+      transform: rotate(-90deg);
+      color: #019901;
+    }
+
+    &.price-down {
+      transform: rotate(90deg);
+      color: #f84b4b;
+    }
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .crypto-name {
+    display: none;
+  }
+}
