@@ -12,16 +12,16 @@ import {HeaderService} from './header.service';
 @NgModule({
   declarations: [
     HeaderComponent,
-    BadgeComponent
+    BadgeComponent,
   ],
   imports: [
     CommonModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
   ],
   providers: [HeaderService, ApiService],
-  exports: [HeaderComponent]
+  exports: [HeaderComponent],
 })
 export class HeaderModule {
 }

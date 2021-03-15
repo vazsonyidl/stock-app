@@ -15,13 +15,13 @@ interface RequestOptions {
 }
 
 @Injectable()
-export class ApiService{
+export class ApiService {
   constructor(private readonly http: HttpClient) {
   }
 
   public get<T>(url: string, options?: RequestOptions): Observable<T> {
     return this.http.get<T>(url, options).pipe(
-      share()
+      share(),
     );
   }
 }

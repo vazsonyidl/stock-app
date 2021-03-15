@@ -17,10 +17,10 @@ import {CryptoCardComponent} from './crypto-card/crypto-card.component';
     MatPaginatorModule,
     MatProgressBarModule,
     MatTooltipModule,
-    MatIconModule
+    MatIconModule,
   ],
   declarations: [CryptoComponent, CryptoCardComponent],
-  providers: [CryptoService]
+  providers: [CryptoService],
 })
 export class CryptoModule {
 }

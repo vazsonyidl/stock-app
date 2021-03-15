@@ -10,7 +10,7 @@ import {NavigationComponent} from './navigation.component';
   imports: [
     CommonModule,
     MatTabsModule,
-    RouterModule
+    RouterModule,
   ],
   exports: [NavigationComponent],
 })

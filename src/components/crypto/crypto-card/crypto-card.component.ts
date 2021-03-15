@@ -4,7 +4,7 @@ import {CryptoDataInterface, TransformedCryptoData} from './crypto-card.model';
 @Component({
   selector: 'crypto-card',
   templateUrl: './crypto-card.template.html',
-  styleUrls: ['crypto-card.style.scss']
+  styleUrls: ['crypto-card.style.scss'],
 })
 export class CryptoCardComponent {
   public cryptoData!: TransformedCryptoData;
@@ -18,7 +18,7 @@ export class CryptoCardComponent {
       circulatingSupply: data.circulating_supply,
       maxSupply: data.max_supply,
       marketCapitlz: data.market_cap,
-      availablePct: data.circulating_supply / data.max_supply * 100
+      availablePct: (data.circulating_supply / data.max_supply) * 100,
     };
   }
 }

@@ -15,14 +15,14 @@ const requiredForexes = ['USD', 'CHF', 'CAD'];
       margin: 0 auto;
       overflow: scroll;
     }
-  `]
+  `],
 })
 export class HeaderComponent {
   forexBadgeRate: Observable<ForexRate>;
 
   constructor(headerService: HeaderService) {
     this.forexBadgeRate = headerService.getForexBadgeRate().pipe(
-      map((forexRateResponse) => HeaderComponent.pluckRequiredForexes(forexRateResponse))
+      map(forexRateResponse => HeaderComponent.pluckRequiredForexes(forexRateResponse)),
     );
   }
 
@@ -37,7 +37,7 @@ export class HeaderComponent {
 
     return {
       base: forexRate.base,
-      quote: quotes
+      quote: quotes,
     };
   }
 }
