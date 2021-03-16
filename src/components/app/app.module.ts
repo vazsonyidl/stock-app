@@ -12,7 +12,7 @@ import {CryptoModule} from '../crypto/crypto.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserAnimationsModule,
@@ -21,12 +21,12 @@ import {CryptoModule} from '../crypto/crypto.module';
     HeaderModule,
     NavigationModule,
     CryptoModule,
-    rootRoutingConfig
+    rootRoutingConfig,
   ],
   providers: [
-    {provide: APP_BASE_HREF, useValue: '/'}
+    {provide: APP_BASE_HREF, useValue: '/'},
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {
 }

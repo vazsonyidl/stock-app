@@ -6,7 +6,7 @@ import {Component} from '@angular/core';
     <app-header></app-header>
     <app-navigation></app-navigation>
     <router-outlet></router-outlet>
-  `
+  `,
 })
 export class AppComponent {
 }

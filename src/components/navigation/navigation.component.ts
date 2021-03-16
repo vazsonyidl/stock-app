@@ -12,7 +12,7 @@ import {NavigationItem, navigationItems} from './navigation.model';
         {{navigationItem.displayName}}
       </a>
     </nav>
-  `
+  `,
 })
 export class NavigationComponent {
   readonly navigationItemsList: Array<NavigationItem> = navigationItems;

@@ -6,18 +6,16 @@ import {ApiService} from 'services/api.service';
 import {environment} from 'environments/environment';
 import {CryptoDataInterface} from './crypto-card/crypto-card.model';
 
-
-const defaultHttpParams: { [key: string]: string} = {
+const defaultHttpParams: {[key: string]: string} = {
   vs_currency: 'usd',
   order: 'market_cap_desc',
   per_page: '100',
   page: '1',
-  sparkline: 'false'
+  sparkline: 'false',
 };
 
 @Injectable()
 export class CryptoService {
-
   constructor(private readonly apiService: ApiService) {
   }
 
