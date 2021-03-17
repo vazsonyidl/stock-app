@@ -26,4 +26,6 @@
     </mat-progress-bar>
   </span>
   <span>{{cryptoData.marketCapitlz | currency:'USD':'symbol-narrow':'4.0-0'}}</span>
+  {{cryptoData.id}}
+  <mat-icon (click)="openDetails(cryptoData.id)">more_vert</mat-icon>
 </mat-card>
