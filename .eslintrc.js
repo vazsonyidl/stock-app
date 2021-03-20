@@ -15,6 +15,7 @@ module.exports = {
   plugins: [
     '@typescript-eslint',
   ],
+  ignorePatterns: ['cypress/*'],
   rules: {
     'no-trailing-spaces': 'error',
     '@typescript-eslint/object-curly-spacing': ['error', 'never'],
