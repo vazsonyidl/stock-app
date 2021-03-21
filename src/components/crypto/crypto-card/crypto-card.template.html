@@ -1,8 +1,8 @@
-<mat-card>
+<mat-card data-testid="crypto-card">
   <span [matTooltip]="cryptoData.name">
     <img [src]="cryptoData.imageSrc"
          [alt]="cryptoData.name">
-    <span class="crypto-name">{{cryptoData.name}}</span>
+    <span class="crypto-name" data-testid="crypto-card-name">{{cryptoData.name}}</span>
   </span>
   <span>{{cryptoData.currentPrice | currency:'USD':'symbol-narrow'}}</span>
   <span class="daily-change">
