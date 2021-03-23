@@ -1,8 +1,8 @@
-<mat-card>
+<mat-card data-testid="crypto-card">
   <span [matTooltip]="cryptoData.name">
     <img [src]="cryptoData.imageSrc"
          [alt]="cryptoData.name">
-    <span class="crypto-name">{{cryptoData.name}}</span>
+    <span class="crypto-name" data-testid="crypto-card-name">{{cryptoData.name}}</span>
   </span>
   <span>{{cryptoData.currentPrice | currency:'USD':'symbol-narrow'}}</span>
   <span class="daily-change">
@@ -26,4 +26,6 @@
     </mat-progress-bar>
   </span>
   <span>{{cryptoData.marketCapitlz | currency:'USD':'symbol-narrow':'4.0-0'}}</span>
+  {{cryptoData.id}}
+  <mat-icon (click)="openDetails(cryptoData.id)">more_vert</mat-icon>
 </mat-card>

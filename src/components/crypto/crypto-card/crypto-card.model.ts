@@ -28,6 +28,7 @@ export interface CryptoDataInterface {
 }
 
 export interface TransformedCryptoData {
+  id: string;
   name: string;
   imageSrc: string;
   currentPrice: number;

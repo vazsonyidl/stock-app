@@ -1,4 +1,6 @@
 import {Component, Input} from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
+
 import {CryptoDataInterface, TransformedCryptoData} from './crypto-card.model';
 
 @Component({
@@ -11,6 +13,7 @@ export class CryptoCardComponent {
 
   @Input() set setCryptoData(data: CryptoDataInterface) {
     this.cryptoData = {
+      id: data.id,
       name: data.name,
       imageSrc: data.image,
       currentPrice: data.current_price,
@@ -20,5 +23,15 @@ export class CryptoCardComponent {
       marketCapitlz: data.market_cap,
       availablePct: (data.circulating_supply / data.max_supply) * 100,
     };
+  }
+
+  constructor(
+    private readonly router: Router,
+    private readonly state: ActivatedRoute,
+
+  ) {}
+
+  public openDetails(cryptoId: string): void {
+    this.router.navigate([cryptoId], {relativeTo: this.state});
   }
 }
