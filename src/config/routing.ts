@@ -11,7 +11,7 @@ const routes: Routes = [
   },
   {
     path: 'cryptocurrency/:id',
-    loadChildren: () => import('../components/crypto/crypto-detail/crypto-detail.module')
+    loadChildren: () => import('../pages/crypto-detail/crypto-detail.module')
       .then(m => m.CryptoDetailModule),
   },
   {
