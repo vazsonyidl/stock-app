@@ -4,9 +4,9 @@ import {CommonModule} from '@angular/common';
 import {CryptoDetailHeaderComponent} from './crypto-detail-header.component';
 
 @NgModule({
+  imports: [CommonModule],
   declarations: [CryptoDetailHeaderComponent],
   exports: [CryptoDetailHeaderComponent],
-  imports: [CommonModule],
 })
 export class CryptoDetailHeaderModule {
 }
