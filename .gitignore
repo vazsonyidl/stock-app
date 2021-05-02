@@ -47,5 +47,8 @@ Thumbs.db
 
 #e2e videos
 
-cypress/videos
-cypress/screenshots
+**/*/cypress/videos
+**/*/cypress/screenshots
+
+#Browserstack files
+results
