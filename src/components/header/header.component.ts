@@ -18,7 +18,7 @@ const requiredForexes = ['USD', 'CHF', 'CAD'];
   `],
 })
 export class HeaderComponent {
-  forexBadgeRate: Observable<ForexRate>;
+  public forexBadgeRate: Observable<ForexRate>;
 
   constructor(headerService: HeaderService) {
     this.forexBadgeRate = headerService.getForexBadgeRate().pipe(
