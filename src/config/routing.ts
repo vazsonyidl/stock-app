@@ -2,6 +2,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {ModuleWithProviders} from '@angular/core';
 
 import {CryptoComponent} from 'components/crypto/crypto.component';
+import {NotFoundComponent} from 'components/not-found/not-found.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'cryptocurrency', pathMatch: 'full'},
@@ -11,13 +12,12 @@ const routes: Routes = [
   },
   {
     path: 'cryptocurrency/:id',
-    loadChildren: () => import('../components/crypto/crypto-detail/crypto-detail.module')
+    loadChildren: () => import('../pages/crypto-detail/crypto-detail.module')
       .then(m => m.CryptoDetailModule),
   },
   {
     path: '404',
-    loadChildren: () => import('../components/not-found/not-found.module')
-      .then(m => m.NotFoundModule),
+    component: NotFoundComponent,
   },
   {path: '**', redirectTo: '404'},
 ];

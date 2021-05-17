@@ -1,9 +1,10 @@
 import {RouterModule, Routes} from '@angular/router';
 import {ModuleWithProviders} from '@angular/core';
-import {CryptoDetailComponent} from './crypto-detail.component';
+
+import {CryptoDetailPage} from './cyrypto-detail.page';
 
 const routes: Routes = [
-  {path: '', component: CryptoDetailComponent},
+  {path: '', component: CryptoDetailPage},
   {path: '**', redirectTo: '404'},
 ];
 

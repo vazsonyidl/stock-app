@@ -1,0 +1,44 @@
+:host {
+  .details-header {
+    display: flex;
+    margin: 8px;
+
+    .basic-info {
+      flex-basis: 33%;
+      display: grid;
+      grid-template-columns: 10% 1fr;
+      grid-template-rows: 32px 24px;
+      row-gap: 4px;
+      grid-template-areas:
+        "icon name"
+        "icon stats";
+
+      .icon-area {
+        grid-area: icon;
+        place-self: center;
+      }
+
+      .name-area {
+        grid-area: name;
+
+        .crypto-name {
+          display: inline-block;
+          padding: 0 4px;
+        }
+      }
+
+      .stats-area {
+        grid-area: stats;
+      }
+
+      .symbol {
+        background-color: #d4d4d4;
+        padding: 4px;
+        border-radius: 8px;
+        margin: 4px;
+        opacity: 0.5;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
